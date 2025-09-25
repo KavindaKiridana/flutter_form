@@ -28,9 +28,7 @@ class _AsynchronousPageState extends State<AsynchronousPage> {
         if (snapshot.connectionState == ConnectionState.waiting) {
           return Center(child: CircularProgressIndicator());
         } else {
-          return Center(
-            child: Text(snapshot.data),
-          ); //i'm getting a error when program running as 'TypeError: null: type 'Null' is not a subtype of type 'String''.but i want to print here the return output of getdata funtions.teach me how to do it
+          return Center(child: Text(snapshot.data));
         }
       },
     );

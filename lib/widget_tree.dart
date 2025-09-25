@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_form/form_page.dart';
 import 'package:flutter_form/asynchronous_page.dart';
+import 'package:flutter_form/network_page.dart';
 
-List<Widget> pages = [FormPage(), AsynchronousPage()];
+List<Widget> pages = [FormPage(), AsynchronousPage(), NetworkPage()];
 
 class FormPae extends StatefulWidget {
   const FormPae({super.key});
@@ -27,6 +28,10 @@ class _FormPaeState extends State<FormPae> {
           NavigationDestination(
             icon: Icon(Icons.signal_wifi_4_bar),
             label: 'asynchronous',
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.network_cell),
+            label: 'network',
           ),
         ],
         onDestinationSelected: (value) {
