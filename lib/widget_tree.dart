@@ -2,8 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_form/form_page.dart';
 import 'package:flutter_form/asynchronous_page.dart';
 import 'package:flutter_form/network_page.dart';
+import 'package:flutter_form/stream_page.dart';
 
-List<Widget> pages = [FormPage(), AsynchronousPage(), NetworkPage()];
+List<Widget> pages = [
+  FormPage(),
+  AsynchronousPage(),
+  NetworkPage(),
+  StreamPage(),
+];
 
 class FormPae extends StatefulWidget {
   const FormPae({super.key});
@@ -33,6 +39,7 @@ class _FormPaeState extends State<FormPae> {
             icon: Icon(Icons.network_cell),
             label: 'network',
           ),
+          NavigationDestination(icon: Icon(Icons.stream), label: 'stream'),
         ],
         onDestinationSelected: (value) {
           setState(() {
